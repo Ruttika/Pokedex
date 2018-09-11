@@ -55,14 +55,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokeCell" id="HMY-wx-Snj">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="HMY-wx-Snj" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-gq-X6f">
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-gq-X6f">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -88,6 +88,10 @@
                                             <constraint firstItem="WSP-gq-X6f" firstAttribute="top" secondItem="HMY-wx-Snj" secondAttribute="top" id="bGl-hg-m0g"/>
                                         </constraints>
                                         <size key="customSize" width="105" height="105"/>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="xGu-dj-7dy" id="y4u-KK-6zu"/>
+                                            <outlet property="thumbImg" destination="WSP-gq-X6f" id="Rd2-1n-6ad"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -111,6 +115,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="fCB-Df-Jmr" id="oGi-vI-Vwt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
